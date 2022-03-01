@@ -12,9 +12,11 @@
   --fs-xl: 4.2rem;
   --fs-500: 3rem;
   --fs-400: 2.4rem;
-  --fs-300: 2.2rem;
+  --fs-300: 2rem;
   --fs-200: 1.5rem;
   --fs-100: 1rem;
+
+  --radius-input: 5px;
 }
 
 html {
@@ -31,8 +33,79 @@ html {
 body {
   font-family: "Space Mono", monospace;
   background: var(--color-background);
+  font-size: var(--fs-400);
 }
 
+/* Button */
+.btn {
+  width: 100%;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-input);
+  text-align: center;
+  padding-block: 1rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.btn--dark {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--light {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.btn--reset {
+  text-transform: uppercase;
+  font-size: var(--fs-300);
+}
+
+.btn:hover {
+  background: #26c0ab88;
+  color: var(--color-primary);
+}
+
+/* Tips */
+.tip-container {
+  display: grid;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.input {
+  background: var(--color-input-bg);
+  border: none;
+  border-radius: var(--radius-input);
+  padding: 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: right;
+}
+
+.input::placeholder {
+  color: var(--color-secondary);
+}
+
+.input:focus {
+  outline: none;
+  border: 2.5px solid var(--color-accent);
+  caret-color: var(--color-accent);
+}
+
+/* input[type="radio"] + .btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+input[type="radio"]:checked + .btn {
+  background: var(--color-accent);
+  color: var(--color-primary);
+} */
 /* Attributions */
 .attribution {
   font-size: 11px;

@@ -12,10 +12,60 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
+    <div class="tip-container">
+      <input class="tip" type="radio" id="radio1" name="tip-amount" value="5" />
+      <label for="radio1" class="btn">5%</label>
+
+      <input
+        class="tip"
+        type="radio"
+        id="radio2"
+        name="tip-amount"
+        value="10"
+      />
+      <label for="radio2" class="btn">10%</label>
+
+      <input
+        class="tip"
+        type="radio"
+        id="radio3"
+        name="tip-amount"
+        value="15"
+      />
+      <label for="radio3" class="btn">15%</label>
+
+      <input
+        class="tip"
+        type="radio"
+        id="radio4"
+        name="tip-amount"
+        value="25"
+      />
+      <label for="radio4" class="btn">25%</label>
+
+      <input
+        class="tip"
+        type="radio"
+        id="radio5"
+        name="tip-amount"
+        value="50"
+      />
+      <label for="radio5" class="btn">50%</label>
+
+      <input type="radio" id="radio6" name="tip-amount" value="custom" /><input
+        class="input"
+        type="text"
+        id="custom-input"
+        placeholder="Custom"
+        onchange=""
+      />
+    </div>
+
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
