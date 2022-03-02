@@ -37,6 +37,10 @@ body {
   font-size: var(--fs-400);
 }
 
+h1 {
+  display: none;
+}
+
 h2,
 h3 {
   font-size: var(--fs-200);
@@ -60,6 +64,15 @@ h3 {
 
 h2 + div {
   margin-bottom: 4rem;
+}
+
+header {
+  text-align: center;
+}
+
+.logo {
+  margin-top: 3rem;
+  margin-bottom: min(8%, 8rem);
 }
 
 /* Button */
