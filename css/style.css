@@ -16,6 +16,7 @@
   --fs-200: 1.5rem;
   --fs-100: 1rem;
 
+  --radius-container: 20px;
   --radius-input: 5px;
 }
 
@@ -34,6 +35,23 @@ body {
   font-family: "Space Mono", monospace;
   background: var(--color-background);
   font-size: var(--fs-400);
+}
+
+h2 {
+  font-size: var(--fs-200);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 0;
+}
+
+.container {
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius-container);
+}
+
+h2 + div {
+  margin-bottom: 4rem;
 }
 
 /* Button */
@@ -69,8 +87,10 @@ body {
 }
 
 /* Tips */
-.tip-container {
+.grid-container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
 }
 
 input[type="radio"] {
@@ -81,13 +101,23 @@ input[type="radio"] {
   background: var(--color-input-bg);
   border: none;
   border-radius: var(--radius-input);
-  padding: 1rem;
+  padding: 1rem 2rem;
   color: var(--color-primary);
   font-weight: 700;
   text-align: right;
+  width: 100%; /* input has a default size on its own */
+}
+
+.input-grp .icon {
+  position: absolute;
+  padding: 1rem 2rem;
 }
 
 .input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.input--custom-tip::placeholder {
   color: var(--color-secondary);
 }
 
@@ -106,6 +136,7 @@ input[type="radio"]:checked + .btn {
   background: var(--color-accent);
   color: var(--color-primary);
 } */
+
 /* Attributions */
 .attribution {
   font-size: 11px;
