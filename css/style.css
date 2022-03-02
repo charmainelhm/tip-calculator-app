@@ -14,7 +14,7 @@
   --fs-400: 2.4rem;
   --fs-300: 2rem;
   --fs-200: 1.5rem;
-  --fs-100: 1rem;
+  --fs-100: 1.4rem;
 
   --radius-container: 20px;
   --radius-input: 5px;
@@ -37,11 +37,19 @@ body {
   font-size: var(--fs-400);
 }
 
-h2 {
+h2,
+h3 {
   font-size: var(--fs-200);
   font-weight: 700;
-  color: var(--color-secondary);
   margin-top: 0;
+}
+
+h2 {
+  color: var(--color-secondary);
+}
+
+h3 {
+  color: var(--color-white);
 }
 
 .container {
@@ -136,6 +144,40 @@ input[type="radio"]:checked + .btn {
   background: var(--color-accent);
   color: var(--color-primary);
 } */
+
+/* Bill Display */
+.container--display {
+  background: var(--color-primary);
+}
+
+.container--display .flex {
+  margin-block: 2rem 3.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.display__title {
+  margin: 0;
+}
+
+.display__title span {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: var(--fs-100);
+  color: var(--color-placeholder);
+}
+
+.display__amount {
+  font-size: var(--fs-500);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 0;
+}
 
 /* Attributions */
 .attribution {
