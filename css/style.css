@@ -35,6 +35,7 @@ body {
   font-family: "Space Mono", monospace;
   background: var(--color-background);
   font-size: var(--fs-400);
+  min-height: 100vh;
 }
 
 h1 {
@@ -60,10 +61,7 @@ h3 {
   background: var(--color-white);
   padding: 3rem;
   border-radius: var(--radius-container);
-}
-
-h2 + div {
-  margin-bottom: 4rem;
+  max-width: 920px;
 }
 
 header {
@@ -71,8 +69,12 @@ header {
 }
 
 .logo {
-  margin-top: 3rem;
   margin-bottom: min(8%, 8rem);
+}
+
+.grid {
+  display: grid;
+  row-gap: 4rem;
 }
 
 /* Button */
@@ -108,9 +110,8 @@ header {
 }
 
 /* Tips */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.grid--tip-options {
+  grid-template-columns: repeat(auto-fit, minmax(117px, 1fr));
   gap: 1.8rem;
 }
 
@@ -161,13 +162,12 @@ input[type="radio"]:checked + .btn {
 /* Bill Display */
 .container--display {
   background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
 }
 
-.container--display .flex {
+.display__content {
   margin-block: 2rem 3.5rem;
-}
-
-.flex {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -194,9 +194,49 @@ input[type="radio"]:checked + .btn {
 
 /* Attributions */
 .attribution {
+  margin-top: 0.5rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.1s ease-in;
+}
+
+.attribution a:hover {
+  color: var(--color-accent);
+}
+
+@media screen and (max-width: 599px) {
+  .logo {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid--2-colms {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+
+  .container--display {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+
+  .container--display .btn {
+    margin-top: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main > .container {
+    margin-inline: auto;
+  }
 }

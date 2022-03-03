@@ -21,83 +21,90 @@
       <h1>Splitter</h1>
       <img class="logo" src="images/logo.svg" alt="Splitter Logo" />
     </header>
-    <main class="container">
-      <h2>Bill</h2>
-      <div class="input-grp">
-        <i class="icon"><img src="images/icon-dollar.svg" alt="" /></i>
-        <input type="text" class="input" placeholder="0" />
-      </div>
-      <h2>Select Tip %</h2>
-      <div class="grid-container">
-        <input
-          class="tip"
-          type="radio"
-          id="radio1"
-          name="tip-amount"
-          value="5"
-        />
-        <label for="radio1" class="btn">5%</label>
-        <input
-          class="tip"
-          type="radio"
-          id="radio2"
-          name="tip-amount"
-          value="10"
-        />
-        <label for="radio2" class="btn">10%</label>
-        <input
-          class="tip"
-          type="radio"
-          id="radio3"
-          name="tip-amount"
-          value="15"
-        />
-        <label for="radio3" class="btn">15%</label>
-        <input
-          class="tip"
-          type="radio"
-          id="radio4"
-          name="tip-amount"
-          value="25"
-        />
-        <label for="radio4" class="btn">25%</label>
-        <input
-          class="tip"
-          type="radio"
-          id="radio5"
-          name="tip-amount"
-          value="50"
-        />
-        <label for="radio5" class="btn">50%</label>
-        <input
-          type="radio"
-          id="radio6"
-          name="tip-amount"
-          value="custom"
-        /><input
-          class="input input--custom-tip"
-          type="text"
-          id="custom-input"
-          placeholder="Custom"
-          onchange=""
-        />
-      </div>
-      <h2>Number of People</h2>
-      <div class="input-grp">
-        <i class="icon"><img src="images/icon-person.svg" alt="" /></i>
-        <input type="text" class="input" placeholder="0" />
-      </div>
-
-      <div class="container container--display">
-        <div class="flex">
-          <h3 class="display__title">Tip Amount <span>/ person</span></h3>
-          <p class="display__amount">$0.00</p>
+    <main>
+      <div class="container grid grid--2-colms">
+        <div class="bill-input">
+          <h2>Bill</h2>
+          <div class="input-grp">
+            <i class="icon"><img src="images/icon-dollar.svg" alt="" /></i>
+            <input type="text" class="input" placeholder="0" />
+          </div>
         </div>
-        <div class="flex">
-          <h3 class="display__title">Total <span>/ person</span></h3>
-          <p class="display__amount">$0.00</p>
+        <div class="tip-input">
+          <h2>Select Tip %</h2>
+          <div class="grid grid--tip-options">
+            <input
+              class="tip"
+              type="radio"
+              id="radio1"
+              name="tip-amount"
+              value="5"
+            />
+            <label for="radio1" class="btn">5%</label>
+            <input
+              class="tip"
+              type="radio"
+              id="radio2"
+              name="tip-amount"
+              value="10"
+            />
+            <label for="radio2" class="btn">10%</label>
+            <input
+              class="tip"
+              type="radio"
+              id="radio3"
+              name="tip-amount"
+              value="15"
+            />
+            <label for="radio3" class="btn">15%</label>
+            <input
+              class="tip"
+              type="radio"
+              id="radio4"
+              name="tip-amount"
+              value="25"
+            />
+            <label for="radio4" class="btn">25%</label>
+            <input
+              class="tip"
+              type="radio"
+              id="radio5"
+              name="tip-amount"
+              value="50"
+            />
+            <label for="radio5" class="btn">50%</label>
+            <input
+              type="radio"
+              id="radio6"
+              name="tip-amount"
+              value="custom"
+            /><input
+              class="input input--custom-tip"
+              type="text"
+              id="custom-input"
+              placeholder="Custom"
+              onchange=""
+            />
+          </div>
         </div>
-        <button class="btn btn--light btn--reset">Reset</button>
+        <div class="pax-input">
+          <h2>Number of People</h2>
+          <div class="input-grp">
+            <i class="icon"><img src="images/icon-person.svg" alt="" /></i>
+            <input type="text" class="input" placeholder="0" />
+          </div>
+        </div>
+        <div class="container container--display">
+          <div class="display__content">
+            <h3 class="display__title">Tip Amount <span>/ person</span></h3>
+            <p class="display__amount">$0.00</p>
+          </div>
+          <div class="display__content">
+            <h3 class="display__title">Total <span>/ person</span></h3>
+            <p class="display__amount">$0.00</p>
+          </div>
+          <button class="btn btn--light btn--reset">Reset</button>
+        </div>
       </div>
     </main>
 
