@@ -8,6 +8,7 @@
   --color-background: #c5e4e7;
   --color-input-bg: #f4fafa;
   --color-white: #ffffff;
+  --color-error: #dd7461;
 
   --fs-xl: 4.2rem;
   --fs-500: 3rem;
@@ -104,6 +105,12 @@ header {
   font-size: var(--fs-300);
 }
 
+.btn--inactive {
+  background: #26c0ab88;
+  color: var(--color-primary);
+  cursor: default;
+}
+
 .btn:hover {
   background: #26c0ab88;
   color: var(--color-primary);
@@ -117,6 +124,16 @@ header {
 
 input[type="radio"] {
   display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .input {
@@ -135,6 +152,20 @@ input[type="radio"] {
   padding: 1rem 2rem;
 }
 
+.input--error {
+  position: relative;
+}
+
+.input--error .input-grp::before {
+  content: "Can't be zero";
+  position: absolute;
+  color: var(--color-error);
+  font-size: var(--fs-200);
+  font-weight: 700;
+  top: 0;
+  right: 0;
+}
+
 .input::placeholder {
   color: var(--color-placeholder);
 }
@@ -147,6 +178,11 @@ input[type="radio"] {
   outline: none;
   border: 2.5px solid var(--color-accent);
   caret-color: var(--color-accent);
+}
+
+.input--error .input:focus {
+  border: 2.5px solid var(--color-error);
+  caret-color: var(--color-error);
 }
 
 /* input[type="radio"] + .btn {

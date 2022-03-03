@@ -23,13 +23,14 @@
     </header>
     <main>
       <div class="container grid grid--2-colms">
-        <div class="bill-input">
+        <div class="input-content bill-input">
           <h2>Bill</h2>
           <div class="input-grp">
             <i class="icon"><img src="images/icon-dollar.svg" alt="" /></i>
-            <input type="text" class="input" placeholder="0" />
+            <input type="number" class="input" id="bill" placeholder="0" />
           </div>
         </div>
+
         <div class="tip-input">
           <h2>Select Tip %</h2>
           <div class="grid grid--tip-options">
@@ -79,31 +80,31 @@
               name="tip-amount"
               value="custom"
             /><input
-              class="input input--custom-tip"
-              type="text"
-              id="custom-input"
+              class="input input-content input--custom-tip"
+              type="number"
+              id="tip"
               placeholder="Custom"
-              onchange=""
             />
           </div>
         </div>
-        <div class="pax-input">
+
+        <div class="input-content pax-input">
           <h2>Number of People</h2>
           <div class="input-grp">
             <i class="icon"><img src="images/icon-person.svg" alt="" /></i>
-            <input type="text" class="input" placeholder="0" />
+            <input type="number" class="input" id="pax" placeholder="0" />
           </div>
         </div>
         <div class="container container--display">
           <div class="display__content">
             <h3 class="display__title">Tip Amount <span>/ person</span></h3>
-            <p class="display__amount">$0.00</p>
+            <p class="display__amount" id="display-tip">$0.00</p>
           </div>
           <div class="display__content">
             <h3 class="display__title">Total <span>/ person</span></h3>
-            <p class="display__amount">$0.00</p>
+            <p class="display__amount" id="display-amt">$0.00</p>
           </div>
-          <button class="btn btn--light btn--reset">Reset</button>
+          <button class="btn btn--light btn--reset btn--inactive">Reset</button>
         </div>
       </div>
     </main>
